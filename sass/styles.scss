@@ -1,0 +1,68 @@
+$bgcolor: #F6F6F6 ;
+$locationcolor: #EAEAEA ;
+
+@mixin bottom-shadow {
+   position: relative;
+   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.10) ;
+}
+
+* {
+   margin: 0;
+   font-family: roboto, sans-serif;
+}
+
+body {
+   max-width: 780px ;
+   margin: auto;
+   text-align: center;
+}
+
+a {
+   text-decoration: none;
+   color: black;
+}
+
+header {  
+   z-index: 1;
+   @include bottom-shadow();
+
+   .logo {
+      padding: 15px 0 5px;
+      width: 200px;
+   }
+}
+
+.location {
+   background-color: $locationcolor;
+   padding: 10px;
+   @include bottom-shadow();
+
+   .location_search {
+      border: none;
+      background-color: $locationcolor;
+      text-align: center;
+      font-weight: bold;
+   }
+}
+
+.intro {
+   background-color: $bgcolor;
+   padding-top: 30px;
+   padding-bottom: 50px;
+   .intro-title {
+      font-size: 1.5em;
+      margin: 0 45px 10px;
+   }
+   .intro-text {
+      margin: 0 20px 40px;
+      opacity: 0.7;
+   }
+   .intro-btn {
+      color: white;
+      font-weight: 500;
+      padding: 15px;
+      background: linear-gradient(#FF79DA, #9356DC);
+      border-radius: 25px;
+      @include bottom-shadow();
+   }
+}
