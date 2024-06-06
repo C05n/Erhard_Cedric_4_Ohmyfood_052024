@@ -6,21 +6,34 @@ $locationcolor: #EAEAEA ;
    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.10) ;
 }
 
+/*** Général ***/ 
+
 * {
    margin: 0;
    font-family: roboto, sans-serif;
 }
 
 body {
-   max-width: 780px ;
+   max-width: 780px;
    width: 100%;
-   
+   margin: 0 auto;
 }
 
 a {
    text-decoration: none;
    color: black;
 }
+
+h2 {
+  margin-left: 20px; 
+}
+
+section {
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
+/*** Header***/ 
 
 header {  
    z-index: 1;
@@ -31,7 +44,7 @@ header {
       width: 200px;
    }
 }
-
+/*** Location ***/ 
 .location {
    background-color: $locationcolor;
    padding: 10px;
@@ -44,7 +57,7 @@ header {
       font-weight: bold;
    }
 }
-
+/*** Intro ***/ 
 .intro {
    background-color: $bgcolor;
    padding-top: 30px;
@@ -67,12 +80,11 @@ header {
       @include bottom-shadow();
    }
 }
-
+/*** Fonctionnement ***/ 
 .fonctionnement {
-   padding-top: 30px;
-   padding-left: 20px;
    counter-reset: compteListe;
    .fonctionnement_list {   
+      margin: 0 20px;
       display: flex;
       flex-direction: column;
       font-size: 18px ;
@@ -82,7 +94,8 @@ header {
       .fonctionnement_cards {
          background-color: $bgcolor;
          padding: 25px 15px;
-         margin: 15px 20px 5px 10px;
+         margin-top: 20px;
+         margin-left: 15px;
          border-radius: 10px;
          @include bottom-shadow()
       }
@@ -107,5 +120,66 @@ header {
          padding: 0 20px;
          color: #7E7E7E;
       }
+   }
+}
+/*** Restaurants ***/ 
+.restaurants {
+   background-color:$bgcolor;
+   padding-top: 30px;
+   .restaurants_cards {
+      margin: 20px 15px;
+      display: flex;
+      flex-direction: column;
+      .card {
+         padding: 0;
+         width: 100%;
+         height: 220px;
+         margin-top: 20px;
+         //
+         display: flex;
+         flex-direction: column;
+         background-color: white;
+         border-radius: 15px;
+      }
+      .card-img {
+         object-fit:cover;
+         width: 100%;
+         height: auto;
+         max-height: 150px;
+         border-top-left-radius: 15px;
+         border-top-right-radius: 15px;
+      }
+      .card-content {
+         margin: 10px;
+         i {
+            font-size: 25px;
+            position: relative;
+            left: 92%;
+            bottom: 30px;
+         }
+      } 
+   }
+}
+/*** Footer ***/ 
+footer {
+   background-color: #353535 ;
+   padding: 20px;
+
+   h4 {
+      font: 400 20px "shrikhand";
+      color: white;
+      margin-bottom: 20px;
+   }
+
+   ul {
+      list-style: none;
+      padding: 0;
+   }
+   li i{
+      margin-right: 10px;
+   }
+   li, li a {
+      color: white;
+      margin-bottom: 5px;
    }
 }
