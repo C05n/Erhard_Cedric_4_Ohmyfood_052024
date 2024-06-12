@@ -1,0 +1,19 @@
+/*** location ***/ 
+
+.location {
+   background-color: $locationbackground;
+   padding: 10px;
+   @include bottom-shadow();
+   text-align: center;
+   .location_search {
+      border: none;
+      background-color: $locationbackground;
+      text-align: center;
+      font-weight: bold;
+   }
+   @media (min-width: 780px) {
+      @include shadow-none ;
+
+      padding: 10px;
+   }
+}

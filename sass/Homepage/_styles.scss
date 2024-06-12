@@ -1,0 +1,30 @@
+/*** Général ***/ 
+
+* {
+   margin: 0;
+   font-family: roboto, sans-serif;
+}
+
+body {
+   max-width: 780px;
+   width: 100%;
+   margin: 0 auto;
+
+   @media (min-width: 780px) {
+      max-width: 100%;
+   }
+}
+
+a {
+   text-decoration: none;
+   color: black;
+}
+
+h2 {
+  margin-left: 20px; 
+}
+
+section {
+   padding-top: 30px;
+   padding-bottom: 30px;
+}

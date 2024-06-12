@@ -1,0 +1,32 @@
+/*** footer ***/ 
+
+footer {
+   background-color: $footerbackground;
+   padding: 20px;
+
+   h4 {
+      font: 400 20px "shrikhand";
+      color: white;
+      margin-bottom: 20px;
+   }
+   ul {
+      list-style: none;
+      padding: 0;
+   }
+   li i{
+      margin-right: 10px;
+   }
+   li, li a {
+      color: white;
+      margin-bottom: 5px;
+   }
+   @media (min-width: 780px) {
+      ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 20px;
+      margin-right: 10%;
+      }
+   }
+}

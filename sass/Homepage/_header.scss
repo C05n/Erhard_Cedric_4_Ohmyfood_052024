@@ -1,0 +1,18 @@
+/*** Header ***/ 
+
+header {  
+   z-index: 1;
+   @include bottom-shadow();
+   text-align: center;
+   .logo {
+      padding: 15px 0 5px;
+      width: 200px;
+   }
+   @media (min-width: 780px) {
+      @include shadow-none;
+
+      .logo {
+         padding: 25px;
+      }
+   }
+}

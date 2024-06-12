@@ -1,0 +1,18 @@
+/*** Colors ***/ 
+
+$greybackground: #F6F6F6 ;
+$locationbackground: #EAEAEA ;
+$footerbackground: #353535;
+$maincolor: #9356dc ;
+$secondcolor: #FF79DA ;
+$thirdcolor: #99E2D0 ;
+
+/*** Mixin ***/ 
+
+@mixin bottom-shadow {
+   position: relative;
+   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.10) ;
+}
+@mixin shadow-none {
+   box-shadow: none;
+}

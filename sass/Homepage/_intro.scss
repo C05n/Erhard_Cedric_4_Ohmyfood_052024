@@ -1,0 +1,38 @@
+/*** intro ***/ 
+
+.intro {
+   background-color: $greybackground;
+   padding-top: 30px;
+   padding-bottom: 50px;
+   text-align: center;
+   .intro-title {
+      font-size: 1.5em;
+      margin: 0 45px 10px;
+   }
+   .intro-text {
+      margin: 0 20px 40px;
+      opacity: 0.7;
+   }
+   .intro-btn {
+      color: white;
+      font-weight: 500;
+      padding: 15px;
+      background: linear-gradient($secondcolor, $maincolor);
+      border-radius: 25px;
+      @include bottom-shadow();
+   }
+   .intro-btn:hover {
+      opacity: 0.7;
+      transition: 0.4s ease-in-out;
+   }
+
+   @media (min-width: 780px) {
+      .intro-title {
+         font-size: 40px;
+         margin-bottom: 30px;
+      }
+      .intro-text {
+         font-size: 18px;
+      }
+   }
+}
