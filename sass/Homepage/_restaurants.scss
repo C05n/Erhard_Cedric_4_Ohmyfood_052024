@@ -36,4 +36,17 @@
          }
       } 
    }
+   @media (min-width: 780px) {
+      .restaurants_div {
+      max-width: 1200px;
+      margin: auto;
+      flex-direction: row;
+         .restaurants_cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 30px;
+         }
+      }
+   }
 }

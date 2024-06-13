@@ -12,6 +12,11 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+@media (min-width: 780px) {
+  body {
+    max-width: 100%;
+  }
+}
 
 a {
   text-decoration: none;
@@ -65,6 +70,19 @@ section {
   left: 92%;
   bottom: 30px;
 }
+@media (min-width: 780px) {
+  .restaurants .restaurants_div {
+    max-width: 1200px;
+    margin: auto;
+    flex-direction: row;
+  }
+  .restaurants .restaurants_div .restaurants_cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
 
 /*** Header ***/
 header {
@@ -76,6 +94,14 @@ header {
 header .logo {
   padding: 15px 0 5px;
   width: 200px;
+}
+@media (min-width: 780px) {
+  header {
+    box-shadow: none;
+  }
+  header .logo {
+    padding: 25px;
+  }
 }
 
 /*** location ***/
@@ -91,6 +117,12 @@ header .logo {
   background-color: #EAEAEA;
   text-align: center;
   font-weight: bold;
+}
+@media (min-width: 780px) {
+  .location {
+    box-shadow: none;
+    padding: 10px;
+  }
 }
 
 /*** intro ***/
@@ -120,6 +152,15 @@ header .logo {
 .intro .intro-btn:hover {
   opacity: 0.7;
   transition: 0.4s ease-in-out;
+}
+@media (min-width: 780px) {
+  .intro .intro-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .intro .intro-text {
+    font-size: 18px;
+  }
 }
 
 /*** fonctionnement ***/
@@ -165,6 +206,21 @@ header .logo {
   padding: 0 20px;
   color: #7E7E7E;
 }
+@media (min-width: 780px) {
+  .fonctionnement {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .fonctionnement .fonctionnement_list {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+  }
+  .fonctionnement .fonctionnement_cards {
+    width: 28%;
+  }
+}
 
 /*** footer ***/
 footer {
@@ -186,4 +242,21 @@ footer li i {
 footer li, footer li a {
   color: white;
   margin-bottom: 5px;
+}
+@media (min-width: 780px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding-bottom: 4px;
+  }
+  footer ul {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 15px;
+  }
+  footer h4 {
+    margin: 15px;
+    margin-left: 40px;
+  }
 }/*# sourceMappingURL=main.css.map */
