@@ -12,8 +12,7 @@
       font-weight: bold;
    }
    @media (min-width: 780px) {
-      @include shadow-none ;
-
+      @include shadow-none ;  
       padding: 10px;
    }
 }
