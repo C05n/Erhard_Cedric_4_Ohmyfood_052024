@@ -1,13 +1,13 @@
 /*** location ***/ 
 
 .location {
-   background-color: $locationbackground;
+   background-color: $backgroundlocation;
    padding: 10px;
    @include bottom-shadow();
    text-align: center;
    .location_search {
       border: none;
-      background-color: $locationbackground;
+      background-color: $backgroundlocation;
       text-align: center;
       font-weight: bold;
    }

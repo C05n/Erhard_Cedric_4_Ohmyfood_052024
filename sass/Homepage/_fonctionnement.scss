@@ -11,7 +11,7 @@
       list-style: none;
       padding-left: 0;
       .fonctionnement_cards {
-         background-color: $greybackground;
+         background-color: $backgroundgrey;
          padding: 25px 15px;
          margin-top: 20px;
          margin-left: 15px;
@@ -32,7 +32,7 @@
          bottom: 20px;
          counter-increment: compteListe;
          content: counter(compteListe) "";
-         background: $maincolor;
+         background: $colormain;
          color: white;
       }
       .fonctionnement_cards i {

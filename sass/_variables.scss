@@ -1,0 +1,27 @@
+/*** Colors ***/ 
+
+$backgroundgrey: #F6F6F6 ;
+$backgroundlocation: #EAEAEA ;
+$backgroundfooter: #353535;
+
+$colormain: #9356dc ;
+$colorsecond: #FF79DA ;
+$colorthird: #99E2D0 ;
+
+/*** Mixin ***/ 
+
+@mixin bottom-shadow {
+   position: relative;
+   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.10) ;
+}
+@mixin shadow-none {
+   box-shadow: none;
+}
+
+@mixin btn-lineargradient {
+   color: white;
+   font-weight: 500;
+   padding: 15px;
+   background: linear-gradient($colorsecond, $colormain);
+   border-radius: 25px;
+}

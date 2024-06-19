@@ -1,7 +1,7 @@
 /*** footer ***/ 
 
 footer {
-   background-color: $footerbackground;
+   background-color: $backgroundfooter;
    padding: 20px;
 
    h4 {
@@ -15,6 +15,8 @@ footer {
    }
    li i{
       margin-right: 10px;
+      font-size: 15px;
+      width: 15px;
    }
    li, li a {
       color: white;

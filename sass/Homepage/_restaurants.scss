@@ -1,7 +1,7 @@
 /*** restaurants ***/ 
 
 .restaurants {
-   background-color:$greybackground;
+   background-color:$backgroundgrey;
    padding-top: 30px;
    .restaurants_cards {
       margin: 20px 15px;
@@ -58,7 +58,7 @@
             opacity: 0;
             transition: 0.4s;
             content: "";
-            background: linear-gradient($maincolor, $secondcolor);
+            background: linear-gradient($colormain, $colorsecond);
           }
          .fa-heart {
             transition-duration: 0.4s;

@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import "../variables.scss";
 @import "styles.scss";
 @import "restaurants.scss";
 @import "header.scss";
@@ -6,3 +6,5 @@
 @import "intro.scss";
 @import "fonctionnement.scss";
 @import "footer.scss";
+
+@import "../Restaurants/menu.scss"
