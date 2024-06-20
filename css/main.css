@@ -68,8 +68,7 @@ section {
 .restaurants .restaurants_cards .card-btn {
   height: 2rem;
   width: 2rem;
-  background-color: initial;
-  border: 0 solid transparent;
+  border: none;
   padding: 0;
   display: flex;
   align-items: center;
@@ -84,8 +83,6 @@ section {
 }
 .restaurants .restaurants_cards .card-btn:before, .restaurants .restaurants_cards .card-btn .fa-heart {
   position: absolute;
-  right: 0;
-  left: 0;
   height: 100%;
   width: 100%;
 }
@@ -97,10 +94,7 @@ section {
 }
 .restaurants .restaurants_cards .card-btn .fa-heart {
   transition-duration: 0.4s;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: white;
   mix-blend-mode: lighten;
 }
 .restaurants .restaurants_cards .card-btn:hover .heart_nobg {
@@ -331,11 +325,7 @@ footer li, footer li a {
   height: 2rem;
   width: 2rem;
   background-color: initial;
-  border: 0 solid transparent;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: none;
   cursor: pointer;
   position: relative;
   background-color: black;
@@ -359,9 +349,6 @@ footer li, footer li a {
 .main_menu .title_div .fa-heart {
   transition-duration: 0.4s;
   background-color: #f6f6f6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   mix-blend-mode: lighten;
 }
 .main_menu .title_div .menu_btn:hover .heart_nobg {

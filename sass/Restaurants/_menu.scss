@@ -27,17 +27,13 @@
          height:2rem;
          width:2rem;
          background-color:initial;
-         border:0 solid transparent;
-         padding:0;
-         display:flex;
-         align-items:center;
-         justify-content:center;
+         border:none;
          cursor:pointer;
          position:relative;
          background-color:black;
       }
       .menu_btn:hover:before{
-        opacity:1
+        opacity: 1;
       }
       .menu_btn:before{
         opacity:0;
@@ -55,9 +51,6 @@
       .fa-heart{   
         transition-duration: 0.4s;
         background-color:#f6f6f6;
-        display:flex;
-        align-items:center;
-        justify-content:center;
         mix-blend-mode:lighten;
       }
       .menu_btn:hover .heart_nobg{

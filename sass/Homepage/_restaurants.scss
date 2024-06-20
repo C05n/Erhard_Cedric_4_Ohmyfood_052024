@@ -33,8 +33,7 @@
       .card-btn {
          height: 2rem;
          width: 2rem;
-         background-color: initial;
-         border: 0 solid transparent;
+         border: none;
          padding: 0;
          display: flex;
          align-items: center;
@@ -46,11 +45,9 @@
          // 
          &:hover:before {
             opacity: 1;
-          }
+         }
          &:before, .fa-heart {
             position: absolute;
-            right: 0;
-            left: 0;
             height: 100%;
             width: 100%;
          }
@@ -59,20 +56,16 @@
             transition: 0.4s;
             content: "";
             background: linear-gradient($colormain, $colorsecond);
-          }
+         }
          .fa-heart {
             transition-duration: 0.4s;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-color: white;
             mix-blend-mode: lighten;
          }
          &:hover .heart_nobg {
             opacity: 0;
-          }
-      }
-      
+         }
+      } 
    }
    @media (min-width: 780px) {
       .restaurants_div {
