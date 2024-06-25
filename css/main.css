@@ -76,26 +76,24 @@ section {
   position: absolute;
   bottom: 15px;
   right: 15px;
-  background-color: black;
-}
-.restaurants .restaurants_cards .card-btn:hover:before {
-  opacity: 1;
-}
-.restaurants .restaurants_cards .card-btn:before, .restaurants .restaurants_cards .card-btn .fa-heart {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-.restaurants .restaurants_cards .card-btn:before {
-  opacity: 0;
-  transition: 0.4s;
-  content: "";
-  background: linear-gradient(#9356dc, #FF79DA);
+  background-color: initial;
 }
 .restaurants .restaurants_cards .card-btn .fa-heart {
-  transition-duration: 0.4s;
-  background-color: white;
-  mix-blend-mode: lighten;
+  position: absolute;
+  padding: 1px;
+}
+.restaurants .restaurants_cards .card-btn .heart_bg {
+  opacity: 0;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(#9356dc, #FF79DA);
+}
+.restaurants .restaurants_cards .card-btn:hover .fa-heart {
+  transition: 0.5s;
+}
+.restaurants .restaurants_cards .card-btn:hover .heart_bg {
+  opacity: 1;
 }
 .restaurants .restaurants_cards .card-btn:hover .heart_nobg {
   opacity: 0;
@@ -217,9 +215,9 @@ header .logo {
 }
 .fonctionnement .fonctionnement_list .fonctionnement_cards::before {
   display: flex;
+  align-items: center;
   justify-content: center;
   font-size: 0.8rem;
-  align-items: center;
   position: absolute;
   border-radius: 100px;
   padding-left: 0;
@@ -321,35 +319,31 @@ footer li, footer li a {
   margin: 0;
 }
 .main_menu .title_div .menu_btn {
-  margin-bottom: 0;
   height: 2rem;
   width: 2rem;
-  background-color: initial;
   border: none;
-  cursor: pointer;
-  position: relative;
-  background-color: black;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: initial;
 }
-.main_menu .title_div .menu_btn:hover:before {
-  opacity: 1;
-}
-.main_menu .title_div .menu_btn:before {
-  opacity: 0;
-  transition: 0.4s;
-  content: "";
-  background: linear-gradient(#9356dc, #FF79DA);
-}
-.main_menu .title_div .menu_btn:before, .main_menu .title_div .fa-heart {
+.main_menu .title_div .menu_btn .fa-heart {
   position: absolute;
-  top: 0;
-  left: 0px;
-  height: 100%;
-  width: 100%;
+  padding: 1px;
 }
-.main_menu .title_div .fa-heart {
-  transition-duration: 0.4s;
-  background-color: #f6f6f6;
-  mix-blend-mode: lighten;
+.main_menu .title_div .menu_btn .heart_bg {
+  opacity: 0;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(#9356dc, #FF79DA);
+}
+.main_menu .title_div .menu_btn:hover .fa-heart {
+  transition: 0.5s;
+}
+.main_menu .title_div .menu_btn:hover .heart_bg {
+  opacity: 1;
 }
 .main_menu .title_div .menu_btn:hover .heart_nobg {
   opacity: 0;

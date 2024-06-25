@@ -13,48 +13,41 @@
    padding-left: 10px;
    padding-right: 10px;
    .title_div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-center ;
       gap: 30px;
       .main_title {
          font-family: Shrikhand;
          font-weight: 400;
          margin: 0;
       }
-      .menu_btn{
-         margin-bottom: 0;
-         height:2rem;
-         width:2rem;
-         background-color:initial;
-         border:none;
-         cursor:pointer;
-         position:relative;
-         background-color:black;
-      }
-      .menu_btn:hover:before{
-        opacity: 1;
-      }
-      .menu_btn:before{
-        opacity:0;
-        transition:0.4s;
-        content:"";
-        background:linear-gradient($colormain,$colorsecond);
-      }
-      .menu_btn:before,.fa-heart{
-        position:absolute;
-        top:0;
-        left:0px;
-        height:100%;
-        width:100%;
-      }
-      .fa-heart{   
-        transition-duration: 0.4s;
-        background-color:#f6f6f6;
-        mix-blend-mode:lighten;
-      }
-      .menu_btn:hover .heart_nobg{
-        opacity:0;
+      .menu_btn {
+         height: 2rem;
+         width: 2rem;
+         border: none;
+         padding: 0;
+         @include flex-center ;
+         background-color: initial;
+         .fa-heart {
+            position: absolute;
+            padding: 1px;
+         }
+         .heart_bg {
+            opacity: 0;
+            color: transparent;
+            background-clip: text;
+            background-image: linear-gradient($colormain, $colorsecond);
+         }
+      } 
+      .menu_btn:hover {
+         .fa-heart {
+            transition: 0.5s;
+         }
+         .heart_bg {
+            opacity: 1;      
+         }
+         .heart_nobg {
+            opacity: 0;            
+         }
       }
    }
 }
@@ -77,11 +70,10 @@
          margin-top: 10px;
          position: relative;
          //
-         display: flex;
-         flex-direction: column;
+         @include flex-column ;
          background-color: white;
          border-radius: 15px;
-         @include bottom-shadow
+         @include bottom-shadow ;
       }
    }
 }

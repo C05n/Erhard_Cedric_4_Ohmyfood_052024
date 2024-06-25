@@ -4,8 +4,7 @@
    counter-reset: compteListe;
    .fonctionnement_list {   
       margin: 0 20px;
-      display: flex;
-      flex-direction: column;
+      @include flex-column ;
       font-size: 18px ;
       font-weight: bold;
       list-style: none;
@@ -16,13 +15,11 @@
          margin-top: 20px;
          margin-left: 15px;
          border-radius: 10px;
-         @include bottom-shadow()
+         @include bottom-shadow() ;
       }
       .fonctionnement_cards::before {
-         display: flex;
-         justify-content: center;
+         @include flex-center ;
          font-size: 0.8rem;
-         align-items: center;
          position: absolute;
          border-radius: 100px;
          padding-left: 0;

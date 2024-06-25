@@ -5,8 +5,7 @@
    padding-top: 30px;
    .restaurants_cards {
       margin: 20px 15px;
-      display: flex;
-      flex-direction: column;
+      @include flex-column ;
       .card {
          padding: 0;
          width: 100%;
@@ -14,8 +13,7 @@
          margin-top: 20px;
          position: relative;
          //
-         display: flex;
-         flex-direction: column;
+         @include flex-column ;
          background-color: white;
          border-radius: 15px;
       }
@@ -35,37 +33,33 @@
          width: 2rem;
          border: none;
          padding: 0;
-         display: flex;
-         align-items: center;
-         justify-content: center;
+         @include flex-center;
          position: absolute;
          bottom: 15px;
          right: 15px;
-         background-color: black;
-         // 
-         &:hover:before {
-            opacity: 1;
-         }
-         &:before, .fa-heart {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-         }
-         &:before {
-            opacity: 0;
-            transition: 0.4s;
-            content: "";
-            background: linear-gradient($colormain, $colorsecond);
-         }
+         background-color: initial;
          .fa-heart {
-            transition-duration: 0.4s;
-            background-color: white;
-            mix-blend-mode: lighten;
+            position: absolute;
+            padding: 1px;
          }
-         &:hover .heart_nobg {
+         .heart_bg {
             opacity: 0;
+            color: transparent;
+            background-clip: text;
+            background-image: linear-gradient($colormain, $colorsecond);
          }
       } 
+      .card-btn:hover {
+         .fa-heart {
+            transition: 0.5s;
+         }
+         .heart_bg {
+            opacity: 1;      
+         }
+         .heart_nobg {
+            opacity: 0;            
+         }
+      }
    }
    @media (min-width: 780px) {
       .restaurants_div {
