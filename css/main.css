@@ -1,6 +1,12 @@
 @charset "UTF-8";
 /*** Colors ***/
 /*** Mixin ***/
+@keyframes Menu_Appears {
+  0% {
+    opacity: 0;
+    transform: translate(100%);
+  }
+}
 /*** Général ***/
 * {
   margin: 0;
@@ -318,6 +324,8 @@ footer li, footer li a {
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
+  overflow: hidden;
+  /*** Menu Card Animation ***/
 }
 .main_menu .title_div {
   display: flex;
@@ -360,6 +368,33 @@ footer li, footer li a {
 .main_menu .title_div .menu_btn:hover .heart_nobg {
   opacity: 0;
 }
+.main_menu .menu_card {
+  animation: Menu_Appears 2s ease-in-out;
+}
+.main_menu .menu_card2 {
+  animation: Menu_Appears 2.2s ease-in-out;
+}
+.main_menu .menu_card3 {
+  animation: Menu_Appears 2.4s ease-in-out;
+}
+.main_menu .menu_card4 {
+  animation: Menu_Appears 2.6s ease-in-out;
+}
+.main_menu .menu_card5 {
+  animation: Menu_Appears 2.8s ease-in-out;
+}
+.main_menu .menu_card6 {
+  animation: Menu_Appears 3s ease-in-out;
+}
+.main_menu .menu_card7 {
+  animation: Menu_Appears 3.2s ease-in-out;
+}
+.main_menu .menu_card8 {
+  animation: Menu_Appears 3.4s ease-in-out;
+}
+.main_menu .menu_card9 {
+  animation: Menu_Appears 3.6s ease-in-out;
+}
 
 .menus {
   padding-top: 0;
@@ -377,7 +412,6 @@ footer li, footer li a {
 .menus .menu_div .menu_card {
   padding: 10px;
   margin-top: 10px;
-  position: relative;
   text-align: left;
   display: flex;
   flex-direction: column;

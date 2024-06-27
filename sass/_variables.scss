@@ -40,3 +40,10 @@ $colorthird: #99E2D0 ;
    display: flex;
    flex-direction: column;
 }
+
+@keyframes Menu_Appears {
+   0% {
+      opacity: 0;
+      transform: translate(100%);
+   }
+}
