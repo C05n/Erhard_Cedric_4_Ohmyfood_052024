@@ -15,11 +15,11 @@
    }
    .intro-btn {
       @include btn-lineargradient;
+      padding: 15px ;
       @include bottom-shadow;
    }
    .intro-btn:hover {
-      opacity: 0.7;
-      transition: 0.4s ease-in-out;
+      @include btn-hover
    }
 
    @media (min-width: 780px) {

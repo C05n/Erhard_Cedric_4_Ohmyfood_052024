@@ -1,3 +1,15 @@
+.menu_header {
+   i {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      @media (min-width: 780px) {
+         top: 28px;
+         left: 25px;
+      }
+   }
+}
+
 .bg_restaurants {
    max-width: 100%;
    object-fit: cover;
@@ -54,6 +66,7 @@
 
 .menus {
    padding-top: 0;
+   text-align: center;
    .menu_div {
       .section_title {
          font-family: Roboto;
@@ -69,6 +82,7 @@
          padding: 10px;
          margin-top: 10px;
          position: relative;
+         text-align: left ;
          //
          @include flex-column ;
          background-color: white;
@@ -76,5 +90,35 @@
          @include bottom-shadow ;
       }
    }
+   .menu_btn {
+      @include btn-lineargradient ;
+      padding: 15px 50px;
+      margin-top: 30px;
+      border: none;
+      font-size: large;
+      @include bottom-shadow
+   }
+   .menu_btn:hover {
+      @include btn-hover ;
+   }
 }
 
+@media (min-width: 780px) {
+   .bg_restaurants {
+      max-height: 600px;
+      width: 100%;
+   }
+
+   .main_menu {
+      max-width: 1200px;
+      margin: -50px auto;
+
+      .menus {
+         max-width: 780px;
+         margin: 0 auto;
+      }
+   }
+   .menu_footer {
+      margin-top: 50px;
+   }
+}

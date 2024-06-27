@@ -21,9 +21,13 @@ $colorthird: #99E2D0 ;
 @mixin btn-lineargradient {
    color: white;
    font-weight: 500;
-   padding: 15px;
    background: linear-gradient($colorsecond, $colormain);
    border-radius: 25px;
+}
+
+@mixin btn-hover {
+   opacity: 0.7;
+   transition: 0.4s ease-in-out;
 }
 
 @mixin flex-center {

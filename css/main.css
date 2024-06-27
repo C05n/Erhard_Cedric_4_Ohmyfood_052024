@@ -171,9 +171,9 @@ header .logo {
 .intro .intro-btn {
   color: white;
   font-weight: 500;
-  padding: 15px;
   background: linear-gradient(#FF79DA, #9356dc);
   border-radius: 25px;
+  padding: 15px;
   position: relative;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
@@ -291,6 +291,18 @@ footer li, footer li a {
   }
 }
 
+.menu_header i {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+@media (min-width: 780px) {
+  .menu_header i {
+    top: 28px;
+    left: 25px;
+  }
+}
+
 .bg_restaurants {
   max-width: 100%;
   -o-object-fit: cover;
@@ -351,6 +363,7 @@ footer li, footer li a {
 
 .menus {
   padding-top: 0;
+  text-align: center;
 }
 .menus .menu_div .section_title {
   font-family: Roboto;
@@ -365,10 +378,45 @@ footer li, footer li a {
   padding: 10px;
   margin-top: 10px;
   position: relative;
+  text-align: left;
   display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 15px;
   position: relative;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.menus .menu_btn {
+  color: white;
+  font-weight: 500;
+  background: linear-gradient(#FF79DA, #9356dc);
+  border-radius: 25px;
+  padding: 15px 50px;
+  margin-top: 30px;
+  border: none;
+  font-size: large;
+  position: relative;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.menus .menu_btn:hover {
+  opacity: 0.7;
+  transition: 0.4s ease-in-out;
+}
+
+@media (min-width: 780px) {
+  .bg_restaurants {
+    max-height: 600px;
+    width: 100%;
+  }
+  .main_menu {
+    max-width: 1200px;
+    margin: -50px auto;
+  }
+  .main_menu .menus {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .menu_footer {
+    margin-top: 50px;
+  }
 }/*# sourceMappingURL=main.css.map */
