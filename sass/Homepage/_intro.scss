@@ -14,8 +14,7 @@
       opacity: 0.7;
    }
    .intro-btn {
-      @include btn-lineargradient;
-      padding: 15px ;
+      @include btn-lineargradient(15px);
       @include bottom-shadow;
    }
    .intro-btn:hover {

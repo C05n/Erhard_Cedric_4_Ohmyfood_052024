@@ -3,6 +3,7 @@
 $backgroundgrey: #F6F6F6 ;
 $backgroundlocation: #EAEAEA ;
 $backgroundfooter: #353535;
+$Fontnewcolor: #008766 ;
 
 $colormain: #9356dc ;
 $colorsecond: #FF79DA ;
@@ -18,11 +19,12 @@ $colorthird: #99E2D0 ;
    box-shadow: none;
 }
 
-@mixin btn-lineargradient {
+@mixin btn-lineargradient($padding) {
    color: white;
    font-weight: 500;
    background: linear-gradient($colorsecond, $colormain);
    border-radius: 25px;
+   padding: $padding;
 }
 
 @mixin btn-hover {

@@ -108,22 +108,61 @@
          border-bottom: 4px solid $colorthird;
          padding-bottom: 5px;
          width: 40px;
-         margin-top: 20px;
+         margin-top: 50px;
+         margin-bottom: 15px;
       }
-
       .menu_card {
-         padding: 10px;
          margin-top: 10px;
          text-align: left ;
          @include flex-column ;
-         background-color: white;
+         background-color: $colorthird;
          border-radius: 15px;
          @include bottom-shadow ;
+         gap: 5px ;
+         overflow: hidden;
+         width: 100%;
+         transition: width 0.4s ease-in-out ;
+         .menu_card_content {
+            width: 95%;
+            padding: 20px;
+            background-color: white;
+            transition: width 0.4s ease-in-out ;
+            position: relative;
+            h4 {
+               font-size: 18px;
+               font-weight: bold;
+            }
+            p {
+               font-size: 15px;
+               font-weight: 300;
+            }
+            
+         }
+         .menu_card_price {
+            display: flex;
+            justify-content: right;
+            text-align: right;
+            font-weight: bold ;
+         }
+         .menu_priceline {
+            display: flex;
+            justify-content: space-between;
+         }
+         
+      }
+      .menu_card_content:hover {
+         width: 85%;
       }
    }
+   .fa-circle-check {
+      position: absolute;
+      color: white;
+      padding:25px;
+      top: 0px ;
+      right: -80px ;
+   }
    .menu_btn {
-      @include btn-lineargradient ;
-      padding: 15px 50px;
+      @include btn-lineargradient(15px 50px) ;
       margin-top: 30px;
       border: none;
       font-size: large;

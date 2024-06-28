@@ -60,6 +60,15 @@
             opacity: 0;            
          }
       }
+      .card_new {
+         background-color: $colorthird;
+         color: $Fontnewcolor;
+         position: absolute;
+         top: 20px;
+         right: 20px;
+         padding: 8px 12px;
+         border-radius: 3px;
+      }
    }
    @media (min-width: 780px) {
       .restaurants_div {
