@@ -17,10 +17,6 @@
       @include btn-lineargradient(15px);
       @include bottom-shadow;
    }
-   .intro-btn:hover {
-      @include btn-hover
-   }
-
    @media (min-width: 780px) {
       .intro-title {
          font-size: 40px;

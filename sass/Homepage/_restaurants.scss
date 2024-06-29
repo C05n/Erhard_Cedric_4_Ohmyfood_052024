@@ -12,7 +12,6 @@
          height: 220px;
          margin-top: 20px;
          position: relative;
-         //
          @include flex-column ;
          background-color: white;
          border-radius: 15px;
@@ -38,38 +37,18 @@
          bottom: 15px;
          right: 15px;
          background-color: initial;
-         .fa-heart {
-            position: absolute;
-            padding: 1px;
-         }
-         .heart_bg {
-            opacity: 0;
-            color: transparent;
-            background-clip: text;
-            background-image: linear-gradient($colormain, $colorsecond);
-         }
-      } 
-      .card-btn:hover {
-         .fa-heart {
-            transition: 0.5s;
-         }
-         .heart_bg {
-            opacity: 1;      
-         }
-         .heart_nobg {
-            opacity: 0;            
-         }
-      }
-      .card_new {
-         background-color: $colorthird;
-         color: $Fontnewcolor;
-         position: absolute;
-         top: 20px;
-         right: 20px;
-         padding: 8px 12px;
-         border-radius: 3px;
       }
    }
+   .card_new {
+      background-color: $colorthird;
+      color: $Fontnewcolor;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 12px;
+      border-radius: 3px;
+   }
+}
    @media (min-width: 780px) {
       .restaurants_div {
       max-width: 1200px;
@@ -83,4 +62,3 @@
          }
       }
    }
-}

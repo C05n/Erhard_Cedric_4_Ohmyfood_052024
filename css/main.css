@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*** Colors ***/
 /*** Mixin ***/
+/*** Keyframes ***/
 @keyframes Menu_Appears {
   0% {
     opacity: 0;
@@ -36,6 +37,83 @@ h2 {
 section {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+/*** Bouton Linear Gradient Homepage et Page Menu ***/
+.intro-btn:hover, .menu_btn:hover {
+  opacity: 0.7;
+  transition: 0.4s ease-in-out;
+}
+
+/*** Coeurs Homepage et Page Menu ***/
+.fa-heart {
+  position: absolute;
+  padding: 1px;
+}
+
+.heart_bg {
+  opacity: 0;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(#9356dc, #FF79DA);
+}
+
+.heart_btn:hover .fa-heart {
+  transition: 0.5s;
+}
+.heart_btn:hover .heart_bg {
+  opacity: 1;
+}
+.heart_btn:hover .heart_nobg {
+  opacity: 0;
+}
+
+/*** Menu Card Animation ***/
+.menu_card {
+  animation: Menu_Appears 2s ease-in-out;
+}
+
+.menu_card2 {
+  animation: Menu_Appears 2.2s ease-in-out;
+}
+
+.menu_card3 {
+  animation: Menu_Appears 2.4s ease-in-out;
+}
+
+.menu_card4 {
+  animation: Menu_Appears 2.6s ease-in-out;
+}
+
+.menu_card5 {
+  animation: Menu_Appears 2.8s ease-in-out;
+}
+
+.menu_card6 {
+  animation: Menu_Appears 3s ease-in-out;
+}
+
+.menu_card7 {
+  animation: Menu_Appears 3.2s ease-in-out;
+}
+
+.menu_card8 {
+  animation: Menu_Appears 3.4s ease-in-out;
+}
+
+.menu_card9 {
+  animation: Menu_Appears 3.6s ease-in-out;
+}
+
+/*** Menu Card Coche ***/
+.menu_card_content {
+  width: calc(100% - 40px);
+  transition: width 0.4s ease-in-out;
+}
+
+.menu_card_content:hover {
+  width: calc(100% - 120px);
 }
 
 /*** restaurants ***/
@@ -84,27 +162,7 @@ section {
   right: 15px;
   background-color: initial;
 }
-.restaurants .restaurants_cards .card-btn .fa-heart {
-  position: absolute;
-  padding: 1px;
-}
-.restaurants .restaurants_cards .card-btn .heart_bg {
-  opacity: 0;
-  color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-  background-image: linear-gradient(#9356dc, #FF79DA);
-}
-.restaurants .restaurants_cards .card-btn:hover .fa-heart {
-  transition: 0.5s;
-}
-.restaurants .restaurants_cards .card-btn:hover .heart_bg {
-  opacity: 1;
-}
-.restaurants .restaurants_cards .card-btn:hover .heart_nobg {
-  opacity: 0;
-}
-.restaurants .restaurants_cards .card_new {
+.restaurants .card_new {
   background-color: #99E2D0;
   color: #008766;
   position: absolute;
@@ -113,99 +171,20 @@ section {
   padding: 8px 12px;
   border-radius: 3px;
 }
+
 @media (min-width: 780px) {
-  .restaurants .restaurants_div {
+  .restaurants_div {
     max-width: 1200px;
     margin: auto;
     flex-direction: row;
   }
-  .restaurants .restaurants_div .restaurants_cards {
+  .restaurants_div .restaurants_cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 30px;
   }
 }
-
-/*** Header ***/
-header {
-  z-index: 1;
-  position: relative;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-header .logo {
-  padding: 15px 0 5px;
-  width: 200px;
-}
-@media (min-width: 780px) {
-  header {
-    box-shadow: none;
-  }
-  header .logo {
-    padding: 25px;
-  }
-}
-
-/*** location ***/
-.location {
-  background-color: #EAEAEA;
-  padding: 10px;
-  position: relative;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-.location .location_search {
-  border: none;
-  background-color: #EAEAEA;
-  text-align: center;
-  font-weight: bold;
-}
-@media (min-width: 780px) {
-  .location {
-    box-shadow: none;
-    padding: 10px;
-  }
-}
-
-/*** intro ***/
-.intro {
-  background-color: #F6F6F6;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  text-align: center;
-}
-.intro .intro-title {
-  font-size: 1.5em;
-  margin: 0 45px 10px;
-}
-.intro .intro-text {
-  margin: 0 20px 40px;
-  opacity: 0.7;
-}
-.intro .intro-btn {
-  color: white;
-  font-weight: 500;
-  background: linear-gradient(#FF79DA, #9356dc);
-  border-radius: 25px;
-  padding: 15px;
-  position: relative;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-}
-.intro .intro-btn:hover {
-  opacity: 0.7;
-  transition: 0.4s ease-in-out;
-}
-@media (min-width: 780px) {
-  .intro .intro-title {
-    font-size: 40px;
-    margin-bottom: 30px;
-  }
-  .intro .intro-text {
-    font-size: 18px;
-  }
-}
-
 /*** fonctionnement ***/
 .fonctionnement {
   counter-reset: compteListe;
@@ -265,6 +244,81 @@ header .logo {
   }
 }
 
+/*** intro ***/
+.intro {
+  background-color: #F6F6F6;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.intro .intro-title {
+  font-size: 1.5em;
+  margin: 0 45px 10px;
+}
+.intro .intro-text {
+  margin: 0 20px 40px;
+  opacity: 0.7;
+}
+.intro .intro-btn {
+  color: white;
+  font-weight: 500;
+  background: linear-gradient(#FF79DA, #9356dc);
+  border-radius: 25px;
+  padding: 15px;
+  position: relative;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 780px) {
+  .intro .intro-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .intro .intro-text {
+    font-size: 18px;
+  }
+}
+
+/*** location ***/
+.location {
+  background-color: #EAEAEA;
+  padding: 10px;
+  position: relative;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.location .location_search {
+  border: none;
+  background-color: #EAEAEA;
+  text-align: center;
+  font-weight: bold;
+}
+@media (min-width: 780px) {
+  .location {
+    box-shadow: none;
+    padding: 10px;
+  }
+}
+
+/*** Header ***/
+header {
+  z-index: 1;
+  position: relative;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+header .logo {
+  padding: 15px 0 5px;
+  width: 200px;
+}
+@media (min-width: 780px) {
+  header {
+    box-shadow: none;
+  }
+  header .logo {
+    padding: 25px;
+  }
+}
+
 /*** footer ***/
 footer {
   background-color: #353535;
@@ -306,22 +360,16 @@ footer li, footer li a {
   }
 }
 
-.menu_header i {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-}
-@media (min-width: 780px) {
-  .menu_header i {
-    top: 28px;
-    left: 25px;
-  }
-}
-
 .bg_restaurants {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 780px) {
+  .bg_restaurants {
+    max-height: 600px;
+    width: 100%;
+  }
 }
 
 .main_menu {
@@ -334,7 +382,12 @@ footer li, footer li a {
   padding-left: 10px;
   padding-right: 10px;
   overflow: hidden;
-  /*** Menu Card Animation ***/
+}
+@media (min-width: 780px) {
+  .main_menu {
+    max-width: 1200px;
+    margin: -50px auto;
+  }
 }
 .main_menu .title_div {
   display: flex;
@@ -347,7 +400,7 @@ footer li, footer li a {
   font-weight: 400;
   margin: 0;
 }
-.main_menu .title_div .menu_btn {
+.main_menu .title_div .main_menu_btn {
   height: 2rem;
   width: 2rem;
   border: none;
@@ -357,59 +410,20 @@ footer li, footer li a {
   justify-content: center;
   background-color: initial;
 }
-.main_menu .title_div .menu_btn .fa-heart {
-  position: absolute;
-  padding: 1px;
-}
-.main_menu .title_div .menu_btn .heart_bg {
-  opacity: 0;
-  color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-  background-image: linear-gradient(#9356dc, #FF79DA);
-}
-.main_menu .title_div .menu_btn:hover .fa-heart {
-  transition: 0.5s;
-}
-.main_menu .title_div .menu_btn:hover .heart_bg {
-  opacity: 1;
-}
-.main_menu .title_div .menu_btn:hover .heart_nobg {
-  opacity: 0;
-}
-.main_menu .menu_card {
-  animation: Menu_Appears 2s ease-in-out;
-}
-.main_menu .menu_card2 {
-  animation: Menu_Appears 2.2s ease-in-out;
-}
-.main_menu .menu_card3 {
-  animation: Menu_Appears 2.4s ease-in-out;
-}
-.main_menu .menu_card4 {
-  animation: Menu_Appears 2.6s ease-in-out;
-}
-.main_menu .menu_card5 {
-  animation: Menu_Appears 2.8s ease-in-out;
-}
-.main_menu .menu_card6 {
-  animation: Menu_Appears 3s ease-in-out;
-}
-.main_menu .menu_card7 {
-  animation: Menu_Appears 3.2s ease-in-out;
-}
-.main_menu .menu_card8 {
-  animation: Menu_Appears 3.4s ease-in-out;
-}
-.main_menu .menu_card9 {
-  animation: Menu_Appears 3.6s ease-in-out;
-}
-
-.menus {
+.main_menu .menu {
   padding-top: 0;
   text-align: center;
 }
-.menus .menu_div .section_title {
+@media (min-width: 780px) {
+  .main_menu .menu {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+}
+.main_menu .menu .menu_div {
+  max-width: 780px;
+}
+.main_menu .menu .menu_div .section_title {
   font-family: Roboto;
   font-weight: 300;
   font-size: 16px;
@@ -419,7 +433,7 @@ footer li, footer li a {
   margin-top: 50px;
   margin-bottom: 15px;
 }
-.menus .menu_div .menu_card {
+.main_menu .menu .menu_div .menu_card {
   margin-top: 10px;
   text-align: left;
   display: flex;
@@ -430,45 +444,36 @@ footer li, footer li a {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   gap: 5px;
   overflow: hidden;
-  width: 100%;
-  transition: width 0.4s ease-in-out;
 }
-.menus .menu_div .menu_card .menu_card_content {
-  width: 95%;
+.main_menu .menu .menu_div .menu_card .menu_card_content {
   padding: 20px;
   background-color: white;
-  transition: width 0.4s ease-in-out;
   position: relative;
 }
-.menus .menu_div .menu_card .menu_card_content h4 {
+.main_menu .menu .menu_div .menu_card .menu_card_content h4 {
   font-size: 18px;
   font-weight: bold;
 }
-.menus .menu_div .menu_card .menu_card_content p {
-  font-size: 15px;
-  font-weight: 300;
-}
-.menus .menu_div .menu_card .menu_card_price {
-  display: flex;
-  justify-content: right;
-  text-align: right;
-  font-weight: bold;
-}
-.menus .menu_div .menu_card .menu_priceline {
+.main_menu .menu .menu_div .menu_card .menu_card_content .menu_priceline {
   display: flex;
   justify-content: space-between;
 }
-.menus .menu_div .menu_card_content:hover {
-  width: 85%;
+.main_menu .menu .menu_div .menu_card .menu_card_content .menu_priceline p {
+  font-weight: 300;
+  font-size: 15px;
 }
-.menus .fa-circle-check {
+.main_menu .menu .menu_div .menu_card .menu_card_content .menu_priceline .menu_price {
+  font-weight: bold;
+  font-size: 16px;
+}
+.main_menu .menu .menu_div .menu_card .menu_card_content .fa-circle-check {
   position: absolute;
   color: white;
   padding: 25px;
   top: 0px;
-  right: -80px;
+  right: -2.5em;
 }
-.menus .menu_btn {
+.main_menu .menu_btn {
   color: white;
   font-weight: 500;
   background: linear-gradient(#FF79DA, #9356dc);
@@ -480,24 +485,21 @@ footer li, footer li a {
   position: relative;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
-.menus .menu_btn:hover {
-  opacity: 0.7;
-  transition: 0.4s ease-in-out;
+
+/*** Menu header ***/
+.menu_header i {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+@media (min-width: 780px) {
+  .menu_header i {
+    top: 28px;
+    left: 25px;
+  }
 }
 
 @media (min-width: 780px) {
-  .bg_restaurants {
-    max-height: 600px;
-    width: 100%;
-  }
-  .main_menu {
-    max-width: 1200px;
-    margin: -50px auto;
-  }
-  .main_menu .menus {
-    max-width: 780px;
-    margin: 0 auto;
-  }
   .menu_footer {
     margin-top: 50px;
   }

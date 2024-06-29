@@ -1,0 +1,19 @@
+/*** Menu header ***/ 
+
+.menu_header {
+   i {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      @media (min-width: 780px) {
+         top: 28px;
+         left: 25px;
+      }
+   }
+}
+
+.menu_footer {
+   @media (min-width: 780px) {
+      margin-top: 50px;
+   }
+}

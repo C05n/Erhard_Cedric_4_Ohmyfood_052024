@@ -1,16 +1,12 @@
 /*** Colors ***/ 
-
 $backgroundgrey: #F6F6F6 ;
 $backgroundlocation: #EAEAEA ;
 $backgroundfooter: #353535;
 $Fontnewcolor: #008766 ;
-
 $colormain: #9356dc ;
 $colorsecond: #FF79DA ;
 $colorthird: #99E2D0 ;
-
 /*** Mixin ***/ 
-
 @mixin bottom-shadow {
    position: relative;
    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.10) ;
@@ -18,7 +14,6 @@ $colorthird: #99E2D0 ;
 @mixin shadow-none {
    box-shadow: none;
 }
-
 @mixin btn-lineargradient($padding) {
    color: white;
    font-weight: 500;
@@ -26,23 +21,20 @@ $colorthird: #99E2D0 ;
    border-radius: 25px;
    padding: $padding;
 }
-
 @mixin btn-hover {
    opacity: 0.7;
    transition: 0.4s ease-in-out;
 }
-
 @mixin flex-center {
    display: flex;
    align-items: center;
    justify-content: center;
 }
-
 @mixin flex-column {
    display: flex;
    flex-direction: column;
 }
-
+/*** Keyframes ***/ 
 @keyframes Menu_Appears {
    0% {
       opacity: 0;

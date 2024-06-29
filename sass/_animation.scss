@@ -1,0 +1,63 @@
+   /*** Bouton Linear Gradient Homepage et Page Menu ***/
+.intro-btn:hover, .menu_btn:hover {
+      @include btn-hover
+}
+   /*** Coeurs Homepage et Page Menu ***/ 
+.fa-heart {
+      position: absolute;
+      padding: 1px;
+}
+.heart_bg {
+      opacity: 0;
+      color: transparent;
+      background-clip: text;
+      background-image: linear-gradient($colormain, $colorsecond);
+}
+.heart_btn:hover {
+   .fa-heart {
+      transition: 0.5s;
+   }
+   .heart_bg {
+      opacity: 1;      
+   }
+   .heart_nobg {
+      opacity: 0;            
+   }
+}
+/*** Menu Card Animation ***/
+.menu_card {
+   animation: Menu_Appears 2s ease-in-out;
+ }
+ .menu_card2 {
+   animation: Menu_Appears 2.2s ease-in-out;
+ }
+ .menu_card3 {
+   animation: Menu_Appears 2.4s ease-in-out;
+ }
+ .menu_card4 {
+   animation: Menu_Appears 2.6s ease-in-out;
+ }
+ .menu_card5 {
+   animation: Menu_Appears 2.8s ease-in-out;
+ }
+ .menu_card6 {
+   animation: Menu_Appears 3s ease-in-out;
+ }
+ .menu_card7 {
+   animation: Menu_Appears 3.2s ease-in-out;
+ }
+ .menu_card8 {
+   animation: Menu_Appears 3.4s ease-in-out;
+ }
+ .menu_card9 {
+   animation: Menu_Appears 3.6s ease-in-out;
+ }
+/*** Menu Card Coche ***/  
+.menu_card_content {
+   width: calc(100% - 40px);
+   transition: width 0.4s ease-in-out ;
+}
+.menu_card_content:hover {
+   width: calc(100% - 120px);
+}
+

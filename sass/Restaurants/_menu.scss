@@ -1,18 +1,10 @@
-.menu_header {
-   i {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      @media (min-width: 780px) {
-         top: 28px;
-         left: 25px;
-      }
-   }
-}
-
 .bg_restaurants {
    max-width: 100%;
    object-fit: cover;
+   @media (min-width: 780px) {
+      max-height: 600px;
+      width: 100%;
+   }
 }
 
 .main_menu {
@@ -25,6 +17,10 @@
    padding-left: 10px;
    padding-right: 10px;
    overflow: hidden ;
+   @media (min-width: 780px) {
+      max-width: 1200px;
+      margin: -50px auto;
+   }
    .title_div {
       @include flex-center ;
       gap: 30px;
@@ -33,162 +29,79 @@
          font-weight: 400;
          margin: 0;
       }
-      .menu_btn {
+      .main_menu_btn {
          height: 2rem;
          width: 2rem;
          border: none;
          padding: 0;
          @include flex-center ;
          background-color: initial;
-         .fa-heart {
-            position: absolute;
-            padding: 1px;
-         }
-         .heart_bg {
-            opacity: 0;
-            color: transparent;
-            background-clip: text;
-            background-image: linear-gradient($colormain, $colorsecond);
-         }
       } 
-      .menu_btn:hover {
-         .fa-heart {
-            transition: 0.5s;
-         }
-         .heart_bg {
-            opacity: 1;      
-         }
-         .heart_nobg {
-            opacity: 0;            
-         }
-      }
-   }
-   /*** Menu Card Animation ***/
-    .menu_card {
-      animation: Menu_Appears 2s ease-in-out;
-    }
-    .menu_card2 {
-      animation: Menu_Appears 2.2s ease-in-out;
-    }
-    .menu_card3 {
-      animation: Menu_Appears 2.4s ease-in-out;
-    }
-    .menu_card4 {
-      animation: Menu_Appears 2.6s ease-in-out;
-    }
-    .menu_card5 {
-      animation: Menu_Appears 2.8s ease-in-out;
-    }
-    .menu_card6 {
-      animation: Menu_Appears 3s ease-in-out;
-    }
-    .menu_card7 {
-      animation: Menu_Appears 3.2s ease-in-out;
-    }
-    .menu_card8 {
-      animation: Menu_Appears 3.4s ease-in-out;
-    }
-    .menu_card9 {
-      animation: Menu_Appears 3.6s ease-in-out;
-    }
-   
-}
-
-
-
-
-.menus {
-   padding-top: 0;
-   text-align: center;
-   .menu_div {
-      .section_title {
-         font-family: Roboto;
-         font-weight: 300;
-         font-size: 16px;
-         border-bottom: 4px solid $colorthird;
-         padding-bottom: 5px;
-         width: 40px;
-         margin-top: 50px;
-         margin-bottom: 15px;
-      }
-      .menu_card {
-         margin-top: 10px;
-         text-align: left ;
-         @include flex-column ;
-         background-color: $colorthird;
-         border-radius: 15px;
-         @include bottom-shadow ;
-         gap: 5px ;
-         overflow: hidden;
-         width: 100%;
-         transition: width 0.4s ease-in-out ;
-         .menu_card_content {
-            width: 95%;
-            padding: 20px;
-            background-color: white;
-            transition: width 0.4s ease-in-out ;
-            position: relative;
-            h4 {
-               font-size: 18px;
-               font-weight: bold;
-            }
-            p {
-               font-size: 15px;
-               font-weight: 300;
-            }
-            
-         }
-         .menu_card_price {
-            display: flex;
-            justify-content: right;
-            text-align: right;
-            font-weight: bold ;
-         }
-         .menu_priceline {
-            display: flex;
-            justify-content: space-between;
-         }
-         
-      }
-      .menu_card_content:hover {
-         width: 85%;
-      }
-   }
-   .fa-circle-check {
-      position: absolute;
-      color: white;
-      padding:25px;
-      top: 0px ;
-      right: -80px ;
-   }
-   .menu_btn {
-      @include btn-lineargradient(15px 50px) ;
-      margin-top: 30px;
-      border: none;
-      font-size: large;
-      @include bottom-shadow
-   }
-   .menu_btn:hover {
-      @include btn-hover ;
-   }
-}
-
-@media (min-width: 780px) {
-   .bg_restaurants {
-      max-height: 600px;
-      width: 100%;
-   }
-
-   .main_menu {
-      max-width: 1200px;
-      margin: -50px auto;
-
-      .menus {
+   }   
+   .menu {
+      padding-top: 0;
+      text-align: center;
+      @media (min-width: 780px) {
          max-width: 780px;
          margin: 0 auto;
       }
+      .menu_div {
+         max-width: 780px;
+         .section_title {
+            font-family: Roboto;
+            font-weight: 300;
+            font-size: 16px;
+            border-bottom: 4px solid $colorthird;
+            padding-bottom: 5px;
+            width: 40px;
+            margin-top: 50px;
+            margin-bottom: 15px;
+         }
+         .menu_card {
+            margin-top: 10px;
+            text-align: left ;
+            @include flex-column ;
+            background-color: $colorthird;
+            border-radius: 15px;
+            @include bottom-shadow ;
+            gap: 5px ;
+            overflow: hidden;
+            .menu_card_content {
+               padding: 20px;
+               background-color: white;
+               position: relative;
+               h4 {
+                  font-size: 18px;
+                  font-weight: bold;
+               }
+               .menu_priceline {
+                  display: flex;
+                  justify-content: space-between;
+                  p {
+                     font-weight: 300 ;
+                     font-size: 15px;
+                  }
+                  .menu_price {
+                     font-weight: bold;
+                     font-size: 16px;
+                  }
+               }  
+               .fa-circle-check {
+                  position: absolute;
+                  color: white;
+                  padding:25px;
+                  top: 0px ;
+                  right: -2.5em ;
+               }
+            } 
+         }
+      }
    }
-   .menu_footer {
-      margin-top: 50px;
+      .menu_btn {
+         @include btn-lineargradient(15px 50px) ;
+         margin-top: 30px;
+         border: none;
+         font-size: large;
+         @include bottom-shadow
+      }
    }
-}
