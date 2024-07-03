@@ -362,6 +362,8 @@ footer li, footer li a {
 
 .bg_restaurants {
   max-width: 100%;
+  max-height: 515px;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
