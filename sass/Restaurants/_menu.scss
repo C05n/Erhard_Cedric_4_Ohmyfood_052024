@@ -75,6 +75,7 @@
                h4 {
                   font-size: 18px;
                   font-weight: bold;
+                  @include text-overflow ;
                }
                .menu_priceline {
                   display: flex;
@@ -82,10 +83,12 @@
                   p {
                      font-weight: 300 ;
                      font-size: 15px;
+                     @include text-overflow ;
                   }
                   .menu_price {
                      font-weight: bold;
                      font-size: 16px;
+                     overflow: visible;
                   }
                }  
                .fa-circle-check {

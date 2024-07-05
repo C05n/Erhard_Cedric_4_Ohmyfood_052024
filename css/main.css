@@ -40,6 +40,11 @@ section {
 }
 
 /*** Bouton Linear Gradient Homepage et Page Menu ***/
+.intro-btn, .menu_btn {
+  transition: opacity 0.4s ease-in-out;
+  opacity: 1;
+}
+
 .intro-btn:hover, .menu_btn:hover {
   opacity: 0.7;
   transition: 0.4s ease-in-out;
@@ -49,6 +54,7 @@ section {
 .fa-heart {
   position: absolute;
   padding: 1px;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .heart_bg {
@@ -61,6 +67,7 @@ section {
 
 .heart_btn:hover .fa-heart {
   transition: 0.5s;
+  cursor: pointer;
 }
 .heart_btn:hover .heart_bg {
   opacity: 1;
@@ -114,6 +121,7 @@ section {
 
 .menu_card_content:hover {
   width: calc(100% - 120px);
+  cursor: pointer;
 }
 
 /*** restaurants ***/
@@ -455,6 +463,9 @@ footer li, footer li a {
 .main_menu .menu .menu_div .menu_card .menu_card_content h4 {
   font-size: 18px;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main_menu .menu .menu_div .menu_card .menu_card_content .menu_priceline {
   display: flex;
@@ -463,10 +474,14 @@ footer li, footer li a {
 .main_menu .menu .menu_div .menu_card .menu_card_content .menu_priceline p {
   font-weight: 300;
   font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main_menu .menu .menu_div .menu_card .menu_card_content .menu_priceline .menu_price {
   font-weight: bold;
   font-size: 16px;
+  overflow: visible;
 }
 .main_menu .menu .menu_div .menu_card .menu_card_content .fa-circle-check {
   position: absolute;

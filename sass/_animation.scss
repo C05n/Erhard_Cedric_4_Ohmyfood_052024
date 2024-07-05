@@ -1,21 +1,28 @@
    /*** Bouton Linear Gradient Homepage et Page Menu ***/
+.intro-btn, .menu_btn {
+  transition: opacity 0.4s ease-in-out;
+  opacity: 1;
+}
 .intro-btn:hover, .menu_btn:hover {
-      @include btn-hover
+  opacity: 0.7;
+  transition: 0.4s ease-in-out;
 }
    /*** Coeurs Homepage et Page Menu ***/ 
 .fa-heart {
-      position: absolute;
-      padding: 1px;
+  position: absolute;
+  padding: 1px;
+  transition: opacity 0.5s ease-in-out;
 }
 .heart_bg {
-      opacity: 0;
-      color: transparent;
-      background-clip: text;
-      background-image: linear-gradient($colormain, $colorsecond);
+  opacity: 0;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient($colormain, $colorsecond);
 }
 .heart_btn:hover {
    .fa-heart {
       transition: 0.5s;
+      cursor: pointer;
    }
    .heart_bg {
       opacity: 1;      
@@ -54,10 +61,11 @@
  }
 /*** Menu Card Coche ***/  
 .menu_card_content {
-   width: calc(100% - 40px);
-   transition: width 0.4s ease-in-out ;
+  width: calc(100% - 40px);
+  transition: width 0.4s ease-in-out ;
 }
 .menu_card_content:hover {
-   width: calc(100% - 120px);
+  width: calc(100% - 120px);
+  cursor: pointer;
 }
 

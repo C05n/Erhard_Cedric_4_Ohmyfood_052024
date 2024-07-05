@@ -21,10 +21,6 @@ $colorthird: #99E2D0 ;
    border-radius: 25px;
    padding: $padding;
 }
-@mixin btn-hover {
-   opacity: 0.7;
-   transition: 0.4s ease-in-out;
-}
 @mixin flex-center {
    display: flex;
    align-items: center;
@@ -33,6 +29,11 @@ $colorthird: #99E2D0 ;
 @mixin flex-column {
    display: flex;
    flex-direction: column;
+}
+@mixin text-overflow {
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
 }
 /*** Keyframes ***/ 
 @keyframes Menu_Appears {
