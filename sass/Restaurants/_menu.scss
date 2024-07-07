@@ -102,11 +102,11 @@
          }
       }
    }
-      .menu_btn {
-         @include btn-lineargradient(15px 50px) ;
-         margin-top: 30px;
-         border: none;
-         font-size: large;
-         @include bottom-shadow
-      }
+   .menu_btn {
+      @include btn-lineargradient(15px 50px) ;
+      margin-top: 30px;
+      border: none;
+      font-size: large;
+      @include bottom-shadow
    }
+}

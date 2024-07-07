@@ -1,7 +1,6 @@
 /*** fonctionnement ***/ 
 
 .fonctionnement {
-   counter-reset: compteListe;
    .fonctionnement_list {   
       margin: 0 20px;
       @include flex-column ;
@@ -17,23 +16,19 @@
          border-radius: 10px;
          @include bottom-shadow() ;
       }
-      .fonctionnement_cards::before {
+      .fonctionnement_cards_number {
          @include flex-center ;
          font-size: 0.8rem;
          position: absolute;
+         left: -12px;
          border-radius: 100px;
-         padding-left: 0;
          width: 1.5rem;
          height: 1.5rem;
-         left: -0.75rem;
-         bottom: 20px;
-         counter-increment: compteListe;
-         content: counter(compteListe) "";
-         background: $colormain;
+         background-color: $colormain;
          color: white;
       }
       .fonctionnement_cards i {
-         padding: 0 20px;
+         padding: 0 5%;
          color: #7E7E7E;
       }
    }
