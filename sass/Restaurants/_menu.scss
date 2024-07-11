@@ -1,15 +1,4 @@
-.bg_restaurants {
-   max-width: 100%;
-   max-height: 515px;
-   width: 100%;
-   object-fit: cover;
-   @media (min-width: 780px) {
-      max-height: 600px;
-      width: 100%;
-   }
-}
-
-.main_menu {
+.menu_main {
    background-color: $backgroundgrey;
    margin-top: -50px;
    padding-top: 25px;
@@ -23,15 +12,15 @@
       max-width: 1200px;
       margin: -50px auto;
    }
-   .title_div {
+   .menu_main_div {
       @include flex-center ;
       gap: 30px;
-      .main_title {
+      .menu_main_div_title {
          font-family: Shrikhand;
          font-weight: 400;
          margin: 0;
       }
-      .main_menu_btn {
+      .menu_main_div_btn {
          height: 2rem;
          width: 2rem;
          border: none;
@@ -40,73 +29,71 @@
          background-color: initial;
       } 
    }   
-   .menu {
+   .menu_section {
       padding-top: 0;
       text-align: center;
       @media (min-width: 780px) {
          max-width: 780px;
          margin: 0 auto;
       }
-      .menu_div {
-         max-width: 780px;
-         .section_title {
-            font-family: Roboto;
-            font-weight: 300;
-            font-size: 16px;
-            border-bottom: 4px solid $colorthird;
-            padding-bottom: 5px;
-            width: 40px;
-            margin-top: 50px;
-            margin-bottom: 15px;
-         }
-         .menu_card {
-            margin-top: 10px;
-            text-align: left ;
-            @include flex-column ;
-            background-color: $colorthird;
-            border-radius: 15px;
-            @include bottom-shadow ;
-            gap: 5px ;
-            overflow: hidden;
-            .menu_card_content {
-               padding: 20px;
-               background-color: white;
-               position: relative;
-               h4 {
-                  font-size: 18px;
-                  font-weight: bold;
+      .menu_section_title {
+         font-family: Roboto;
+         font-weight: 300;
+         font-size: 16px;
+         border-bottom: 4px solid $colorthird;
+         padding-bottom: 5px;
+         width: 40px;
+         margin-top: 50px;
+         margin-bottom: 15px;
+      }
+      .menu_card {
+         margin-top: 10px;
+         text-align: left ;
+         @include flex-column ;
+         background-color: $colorthird;
+         border-radius: 15px;
+         @include bottom-shadow ;
+         gap: 5px ;
+         overflow: hidden;
+         .menu_card_content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            h4 {
+               font-size: 18px;
+               font-weight: bold;
+               @include text-overflow ;
+            }
+            .menu_card_content_priceline {
+               display: flex;
+               justify-content: space-between;
+               p {
+                  font-weight: 300 ;
+                  font-size: 15px;
                   @include text-overflow ;
                }
-               .menu_priceline {
-                  display: flex;
-                  justify-content: space-between;
-                  p {
-                     font-weight: 300 ;
-                     font-size: 15px;
-                     @include text-overflow ;
-                  }
-                  .menu_price {
-                     font-weight: bold;
-                     font-size: 16px;
-                     overflow: visible;
-                  }
-               }  
-               .fa-circle-check {
-                  position: absolute;
-                  color: white;
-                  padding:25px;
-                  top: 0px ;
-                  right: -2.5em ;
+               .menu_price {
+                  font-weight: bold;
+                  font-size: 16px;
+                  overflow: visible;
                }
-            } 
-         }
+            }  
+            .fa-circle-check {
+               position: absolute;
+               color: white;
+               padding:25px;
+               top: 0px ;
+               right: -2.5em ;
+            }
+         } 
       }
    }
-   .menu_btn {
-      @include btn-lineargradient(15px 50px) ;
-      margin-top: 30px;
-      border: none;
-      font-size: large;
-      @include bottom-shadow
-   }
 }
+.menu_btn-gradient {
+   @include btn-lineargradient(15px 50px) ;
+   margin-top: 30px;
+   border: none;
+   font-size: large;
+   @include bottom-shadow
+}
+

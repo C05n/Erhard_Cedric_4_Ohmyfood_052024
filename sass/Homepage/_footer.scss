@@ -3,7 +3,7 @@
 footer {
    background-color: $backgroundfooter;
    padding: 20px;
-   h4 {
+   .footer_title {
       font: 400 20px "shrikhand";
       color: white;
       margin-bottom: 20px;
@@ -31,7 +31,7 @@ footer {
          gap: 30px;
          margin-bottom: 15px;
       }
-      h4 {
+      .footer_title {
          margin: 15px;
          margin-left: 40px;
       }

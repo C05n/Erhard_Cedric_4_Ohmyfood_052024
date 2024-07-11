@@ -3,10 +3,10 @@
 .restaurants {
    background-color:$backgroundgrey;
    padding-top: 30px;
-   .restaurants_cards {
+   .restaurants_list {
       margin: 20px 15px;
       @include flex-column ;
-      .card {
+      .restaurant_card {
          padding: 0;
          width: 100%;
          height: 220px;
@@ -15,46 +15,46 @@
          @include flex-column ;
          background-color: white;
          border-radius: 15px;
+         .restaurant_card_img {
+            object-fit:cover;
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+         }
+         .restaurant_card_badge-new {
+            background-color: $colorthird;
+            color: $Fontnewcolor;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 12px;
+            border-radius: 3px;
+         }
+         .restaurant_card_content {
+            margin: 10px;
+         } 
+         .restaurant_card_btn {
+            height: 2rem;
+            width: 2rem;
+            border: none;
+            padding: 0;
+            @include flex-center;
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background-color: initial;
+         }
       }
-      .card-img {
-         object-fit:cover;
-         width: 100%;
-         height: auto;
-         max-height: 150px;
-         border-top-left-radius: 15px;
-         border-top-right-radius: 15px;
-      }
-      .card-content {
-         margin: 10px;
-      } 
-      .card-btn {
-         height: 2rem;
-         width: 2rem;
-         border: none;
-         padding: 0;
-         @include flex-center;
-         position: absolute;
-         bottom: 15px;
-         right: 15px;
-         background-color: initial;
-      }
-   }
-   .card_new {
-      background-color: $colorthird;
-      color: $Fontnewcolor;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 8px 12px;
-      border-radius: 3px;
    }
 }
    @media (min-width: 780px) {
-      .restaurants_div {
+      .restaurants_container {
       max-width: 1200px;
       margin: auto;
       flex-direction: row;
-         .restaurants_cards {
+         .restaurants_list {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);

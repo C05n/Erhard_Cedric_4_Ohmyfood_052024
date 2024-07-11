@@ -1,7 +1,7 @@
 /*** Menu header ***/ 
 
-.menu_header {
-   i {
+.header {
+   .header_arrow {
       position: absolute;
       top: 15px;
       left: 15px;
@@ -11,7 +11,16 @@
       }
    }
 }
-
+.menu_bg_restaurants {
+   max-width: 100%;
+   max-height: 515px;
+   width: 100%;
+   object-fit: cover;
+   @media (min-width: 780px) {
+      max-height: 600px;
+      width: 100%;
+   }
+}
 .menu_footer {
    @media (min-width: 780px) {
       margin-top: 50px;

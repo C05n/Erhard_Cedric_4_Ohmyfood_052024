@@ -1,9 +1,9 @@
    /*** Bouton Linear Gradient Homepage et Page Menu ***/
-.intro-btn, .menu_btn {
+.intro_btn-gradient, .menu_btn-gradient {
   transition: opacity 0.4s ease-in-out;
   opacity: 1;
 }
-.intro-btn:hover, .menu_btn:hover {
+.intro_btn-gradient:hover, .menu_btn-gradient:hover {
   opacity: 0.7;
   transition: 0.4s ease-in-out;
 }
@@ -13,7 +13,7 @@
   padding: 1px;
   transition: opacity 0.5s ease-in-out;
 }
-.heart_bg {
+.heart_btn-bg {
   opacity: 0;
   color: transparent;
   background-clip: text;
@@ -24,39 +24,39 @@
       transition: 0.5s;
       cursor: pointer;
    }
-   .heart_bg {
+   .heart_btn-bg {
       opacity: 1;      
    }
-   .heart_nobg {
+   .heart_btn-nobg {
       opacity: 0;            
    }
 }
 /*** Menu Card Animation ***/
-.menu_card {
+.menu_card-1 {
    animation: Menu_Appears 2s ease-in-out;
  }
- .menu_card2 {
+ .menu_card-2 {
    animation: Menu_Appears 2.2s ease-in-out;
  }
- .menu_card3 {
+ .menu_card-3 {
    animation: Menu_Appears 2.4s ease-in-out;
  }
- .menu_card4 {
+ .menu_card-4 {
    animation: Menu_Appears 2.6s ease-in-out;
  }
- .menu_card5 {
+ .menu_card-5 {
    animation: Menu_Appears 2.8s ease-in-out;
  }
- .menu_card6 {
+ .menu_card-6 {
    animation: Menu_Appears 3s ease-in-out;
  }
- .menu_card7 {
+ .menu_card-7 {
    animation: Menu_Appears 3.2s ease-in-out;
  }
- .menu_card8 {
+ .menu_card-8 {
    animation: Menu_Appears 3.4s ease-in-out;
  }
- .menu_card9 {
+ .menu_card-9 {
    animation: Menu_Appears 3.6s ease-in-out;
  }
 /*** Menu Card Coche ***/  
@@ -74,11 +74,11 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color:rgba($color: white, $alpha: 0.80);
+  background-color:rgba($color: white, $alpha: 1);
   z-index: -1;
   animation: loader_end 3s linear;
   @include flex-center ;
-  .loader_bar {
+  .loader_logo {
     color: transparent;
     background-clip:text ;
     background-image: linear-gradient(to right, $colormain, $colorsecond, $colorthird);

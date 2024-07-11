@@ -7,6 +7,10 @@
     opacity: 0;
     transform: translate(100%);
   }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 @keyframes loader_charge {
   0% {
@@ -78,12 +82,12 @@ section {
 }
 
 /*** Bouton Linear Gradient Homepage et Page Menu ***/
-.intro-btn, .menu_btn {
+.intro_btn-gradient, .menu_btn-gradient {
   transition: opacity 0.4s ease-in-out;
   opacity: 1;
 }
 
-.intro-btn:hover, .menu_btn:hover {
+.intro_btn-gradient:hover, .menu_btn-gradient:hover {
   opacity: 0.7;
   transition: 0.4s ease-in-out;
 }
@@ -95,7 +99,7 @@ section {
   transition: opacity 0.5s ease-in-out;
 }
 
-.heart_bg {
+.heart_btn-bg {
   opacity: 0;
   color: transparent;
   -webkit-background-clip: text;
@@ -107,47 +111,47 @@ section {
   transition: 0.5s;
   cursor: pointer;
 }
-.heart_btn:hover .heart_bg {
+.heart_btn:hover .heart_btn-bg {
   opacity: 1;
 }
-.heart_btn:hover .heart_nobg {
+.heart_btn:hover .heart_btn-nobg {
   opacity: 0;
 }
 
 /*** Menu Card Animation ***/
-.menu_card {
+.menu_card-1 {
   animation: Menu_Appears 2s ease-in-out;
 }
 
-.menu_card2 {
+.menu_card-2 {
   animation: Menu_Appears 2.2s ease-in-out;
 }
 
-.menu_card3 {
+.menu_card-3 {
   animation: Menu_Appears 2.4s ease-in-out;
 }
 
-.menu_card4 {
+.menu_card-4 {
   animation: Menu_Appears 2.6s ease-in-out;
 }
 
-.menu_card5 {
+.menu_card-5 {
   animation: Menu_Appears 2.8s ease-in-out;
 }
 
-.menu_card6 {
+.menu_card-6 {
   animation: Menu_Appears 3s ease-in-out;
 }
 
-.menu_card7 {
+.menu_card-7 {
   animation: Menu_Appears 3.2s ease-in-out;
 }
 
-.menu_card8 {
+.menu_card-8 {
   animation: Menu_Appears 3.4s ease-in-out;
 }
 
-.menu_card9 {
+.menu_card-9 {
   animation: Menu_Appears 3.6s ease-in-out;
 }
 
@@ -168,14 +172,14 @@ section {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
   z-index: -1;
   animation: loader_end 3s linear;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.loader .loader_bar {
+.loader .loader_logo {
   color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
@@ -192,12 +196,12 @@ section {
   background-color: #F6F6F6;
   padding-top: 30px;
 }
-.restaurants .restaurants_cards {
+.restaurants .restaurants_list {
   margin: 20px 15px;
   display: flex;
   flex-direction: column;
 }
-.restaurants .restaurants_cards .card {
+.restaurants .restaurants_list .restaurant_card {
   padding: 0;
   width: 100%;
   height: 220px;
@@ -208,7 +212,7 @@ section {
   background-color: white;
   border-radius: 15px;
 }
-.restaurants .restaurants_cards .card-img {
+.restaurants .restaurants_list .restaurant_card .restaurant_card_img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -217,10 +221,19 @@ section {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.restaurants .restaurants_cards .card-content {
+.restaurants .restaurants_list .restaurant_card .restaurant_card_badge-new {
+  background-color: #99E2D0;
+  color: #008766;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+.restaurants .restaurants_list .restaurant_card .restaurant_card_content {
   margin: 10px;
 }
-.restaurants .restaurants_cards .card-btn {
+.restaurants .restaurants_list .restaurant_card .restaurant_card_btn {
   height: 2rem;
   width: 2rem;
   border: none;
@@ -233,23 +246,14 @@ section {
   right: 15px;
   background-color: initial;
 }
-.restaurants .card_new {
-  background-color: #99E2D0;
-  color: #008766;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 8px 12px;
-  border-radius: 3px;
-}
 
 @media (min-width: 780px) {
-  .restaurants_div {
+  .restaurants_container {
     max-width: 1200px;
     margin: auto;
     flex-direction: row;
   }
-  .restaurants_div .restaurants_cards {
+  .restaurants_container .restaurants_list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -266,7 +270,7 @@ section {
   list-style: none;
   padding-left: 0;
 }
-.fonctionnement .fonctionnement_list .fonctionnement_cards {
+.fonctionnement .fonctionnement_list .fonctionnement_card {
   background-color: #F6F6F6;
   padding: 25px 15px;
   margin-top: 20px;
@@ -275,7 +279,7 @@ section {
   position: relative;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
-.fonctionnement .fonctionnement_list .fonctionnement_cards_number {
+.fonctionnement .fonctionnement_list .fonctionnement_card-number {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -288,7 +292,7 @@ section {
   background-color: #9356dc;
   color: white;
 }
-.fonctionnement .fonctionnement_list .fonctionnement_cards i {
+.fonctionnement .fonctionnement_list .fonctionnement_card i {
   padding: 0 5%;
   color: #7E7E7E;
 }
@@ -303,7 +307,7 @@ section {
     justify-content: space-around;
     margin: 0;
   }
-  .fonctionnement .fonctionnement_cards {
+  .fonctionnement .fonctionnement_card {
     width: 28%;
   }
 }
@@ -315,15 +319,15 @@ section {
   padding-bottom: 50px;
   text-align: center;
 }
-.intro .intro-title {
+.intro .intro_title {
   font-size: 1.5em;
   margin: 0 45px 10px;
 }
-.intro .intro-text {
+.intro .intro_text {
   margin: 0 20px 40px;
   opacity: 0.7;
 }
-.intro .intro-btn {
+.intro .intro_btn-gradient {
   color: white;
   font-weight: 500;
   background: linear-gradient(#FF79DA, #9356dc);
@@ -333,11 +337,11 @@ section {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 780px) {
-  .intro .intro-title {
+  .intro .intro_title {
     font-size: 40px;
     margin-bottom: 30px;
   }
-  .intro .intro-text {
+  .intro .intro_text {
     font-size: 18px;
   }
 }
@@ -370,15 +374,17 @@ header {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-header .logo {
-  padding: 15px 0 5px;
-  width: 200px;
-}
 @media (min-width: 780px) {
   header {
     box-shadow: none;
   }
-  header .logo {
+}
+header .header_logo {
+  padding: 15px 0 5px;
+  width: 200px;
+}
+@media (min-width: 780px) {
+  header .header_logo {
     padding: 25px;
   }
 }
@@ -388,7 +394,7 @@ footer {
   background-color: #353535;
   padding: 20px;
 }
-footer h4 {
+footer .footer_title {
   font: 400 20px "shrikhand";
   color: white;
   margin-bottom: 20px;
@@ -418,27 +424,13 @@ footer li, footer li a {
     gap: 30px;
     margin-bottom: 15px;
   }
-  footer h4 {
+  footer .footer_title {
     margin: 15px;
     margin-left: 40px;
   }
 }
 
-.bg_restaurants {
-  max-width: 100%;
-  max-height: 515px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (min-width: 780px) {
-  .bg_restaurants {
-    max-height: 600px;
-    width: 100%;
-  }
-}
-
-.main_menu {
+.menu_main {
   background-color: #F6F6F6;
   margin-top: -50px;
   padding-top: 25px;
@@ -450,23 +442,23 @@ footer li, footer li a {
   overflow: hidden;
 }
 @media (min-width: 780px) {
-  .main_menu {
+  .menu_main {
     max-width: 1200px;
     margin: -50px auto;
   }
 }
-.main_menu .title_div {
+.menu_main .menu_main_div {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
-.main_menu .title_div .main_title {
+.menu_main .menu_main_div .menu_main_div_title {
   font-family: Shrikhand;
   font-weight: 400;
   margin: 0;
 }
-.main_menu .title_div .main_menu_btn {
+.menu_main .menu_main_div .menu_main_div_btn {
   height: 2rem;
   width: 2rem;
   border: none;
@@ -476,20 +468,17 @@ footer li, footer li a {
   justify-content: center;
   background-color: initial;
 }
-.main_menu .menu {
+.menu_main .menu_section {
   padding-top: 0;
   text-align: center;
 }
 @media (min-width: 780px) {
-  .main_menu .menu {
+  .menu_main .menu_section {
     max-width: 780px;
     margin: 0 auto;
   }
 }
-.main_menu .menu .menu_div {
-  max-width: 780px;
-}
-.main_menu .menu .menu_div .section_title {
+.menu_main .menu_section .menu_section_title {
   font-family: Roboto;
   font-weight: 300;
   font-size: 16px;
@@ -499,7 +488,7 @@ footer li, footer li a {
   margin-top: 50px;
   margin-bottom: 15px;
 }
-.main_menu .menu .menu_div .menu_card {
+.menu_main .menu_section .menu_card {
   margin-top: 10px;
   text-align: left;
   display: flex;
@@ -511,42 +500,43 @@ footer li, footer li a {
   gap: 5px;
   overflow: hidden;
 }
-.main_menu .menu .menu_div .menu_card .menu_card_content {
+.menu_main .menu_section .menu_card .menu_card_content {
   padding: 20px;
   background-color: white;
   position: relative;
 }
-.main_menu .menu .menu_div .menu_card .menu_card_content h4 {
+.menu_main .menu_section .menu_card .menu_card_content h4 {
   font-size: 18px;
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main_menu .menu .menu_div .menu_card .menu_card_content .menu_priceline {
+.menu_main .menu_section .menu_card .menu_card_content .menu_card_content_priceline {
   display: flex;
   justify-content: space-between;
 }
-.main_menu .menu .menu_div .menu_card .menu_card_content .menu_priceline p {
+.menu_main .menu_section .menu_card .menu_card_content .menu_card_content_priceline p {
   font-weight: 300;
   font-size: 15px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main_menu .menu .menu_div .menu_card .menu_card_content .menu_priceline .menu_price {
+.menu_main .menu_section .menu_card .menu_card_content .menu_card_content_priceline .menu_price {
   font-weight: bold;
   font-size: 16px;
   overflow: visible;
 }
-.main_menu .menu .menu_div .menu_card .menu_card_content .fa-circle-check {
+.menu_main .menu_section .menu_card .menu_card_content .fa-circle-check {
   position: absolute;
   color: white;
   padding: 25px;
   top: 0px;
   right: -2.5em;
 }
-.main_menu .menu_btn {
+
+.menu_btn-gradient {
   color: white;
   font-weight: 500;
   background: linear-gradient(#FF79DA, #9356dc);
@@ -560,15 +550,29 @@ footer li, footer li a {
 }
 
 /*** Menu header ***/
-.menu_header i {
+.header .header_arrow {
   position: absolute;
   top: 15px;
   left: 15px;
 }
 @media (min-width: 780px) {
-  .menu_header i {
+  .header .header_arrow {
     top: 28px;
     left: 25px;
+  }
+}
+
+.menu_bg_restaurants {
+  max-width: 100%;
+  max-height: 515px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 780px) {
+  .menu_bg_restaurants {
+    max-height: 600px;
+    width: 100%;
   }
 }
 

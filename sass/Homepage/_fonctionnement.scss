@@ -8,7 +8,7 @@
       font-weight: bold;
       list-style: none;
       padding-left: 0;
-      .fonctionnement_cards {
+      .fonctionnement_card {
          background-color: $backgroundgrey;
          padding: 25px 15px;
          margin-top: 20px;
@@ -16,7 +16,7 @@
          border-radius: 10px;
          @include bottom-shadow() ;
       }
-      .fonctionnement_cards_number {
+      .fonctionnement_card-number {
          @include flex-center ;
          font-size: 0.8rem;
          position: absolute;
@@ -27,7 +27,7 @@
          background-color: $colormain;
          color: white;
       }
-      .fonctionnement_cards i {
+      .fonctionnement_card i {
          padding: 0 5%;
          color: #7E7E7E;
       }
@@ -41,7 +41,7 @@
          justify-content: space-around;
          margin: 0;
       }
-      .fonctionnement_cards {
+      .fonctionnement_card {
          width: 28%;
       }
    }
