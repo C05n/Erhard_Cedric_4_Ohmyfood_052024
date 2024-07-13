@@ -1,6 +1,7 @@
 /*** fonctionnement ***/ 
 
 .fonctionnement {
+   background-color: white;
    .fonctionnement_list {   
       margin: 0 20px;
       @include flex-column ;

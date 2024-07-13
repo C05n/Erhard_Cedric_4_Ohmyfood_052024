@@ -2,7 +2,7 @@
 /*** Colors ***/
 /*** Mixin ***/
 /*** Keyframes ***/
-@keyframes Menu_Appears {
+@keyframes menu_appears {
   0% {
     opacity: 0;
     transform: translate(100%);
@@ -37,12 +37,8 @@
     opacity: 1;
     z-index: 1;
   }
-  33% {
-    opacity: 0.9;
-    z-index: 1;
-  }
   50% {
-    opacity: 0.75;
+    opacity: 0.8;
     z-index: 1;
   }
   100% {
@@ -120,35 +116,35 @@ section {
 
 /*** Menu Card Animation ***/
 .menu_card-1 {
-  animation: Menu_Appears 2s ease-in-out;
+  animation: menu_appears 2s ease-in-out;
 }
 
 .menu_card-2 {
-  animation: Menu_Appears 2.2s ease-in-out;
+  animation: menu_appears 2.2s ease-in-out;
 }
 
 .menu_card-3 {
-  animation: Menu_Appears 2.4s ease-in-out;
+  animation: menu_appears 2.4s ease-in-out;
 }
 
 .menu_card-4 {
-  animation: Menu_Appears 2.6s ease-in-out;
+  animation: menu_appears 2.6s ease-in-out;
 }
 
 .menu_card-5 {
-  animation: Menu_Appears 2.8s ease-in-out;
+  animation: menu_appears 2.8s ease-in-out;
 }
 
 .menu_card-6 {
-  animation: Menu_Appears 3s ease-in-out;
+  animation: menu_appears 3s ease-in-out;
 }
 
 .menu_card-7 {
-  animation: Menu_Appears 3.2s ease-in-out;
+  animation: menu_appears 3.2s ease-in-out;
 }
 
 .menu_card-8 {
-  animation: Menu_Appears 3.4s ease-in-out;
+  animation: menu_appears 3.4s ease-in-out;
 }
 
 .menu_card-9 {
@@ -261,6 +257,9 @@ section {
   }
 }
 /*** fonctionnement ***/
+.fonctionnement {
+  background-color: white;
+}
 .fonctionnement .fonctionnement_list {
   margin: 0 20px;
   display: flex;
