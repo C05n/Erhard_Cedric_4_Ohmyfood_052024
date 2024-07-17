@@ -148,7 +148,7 @@ section {
 }
 
 .menu_card-9 {
-  animation: Menu_Appears 3.6s ease-in-out;
+  animation: menu_appears 3.6s ease-in-out;
 }
 
 /*** Menu Card Coche ***/
