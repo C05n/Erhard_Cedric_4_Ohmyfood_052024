@@ -295,6 +295,9 @@ section {
   padding: 0 5%;
   color: #7E7E7E;
 }
+.fonctionnement .fonctionnement_list .fonctionnement_card:hover i {
+  color: #9356dc;
+}
 @media (min-width: 780px) {
   .fonctionnement {
     width: 1200px;

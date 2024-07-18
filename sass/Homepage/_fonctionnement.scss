@@ -32,6 +32,11 @@
          padding: 0 5%;
          color: #7E7E7E;
       }
+      .fonctionnement_card:hover {
+        i{
+         color: $colormain;
+        }
+      }
    }
    @media (min-width: 780px) {
       width: 1200px;
